@@ -2,5 +2,7 @@ language: c
 compiler:
   - gcc
   - clang
-# Change this to your needs
+before_install:
+ - sudo apt-get -qq update
+ - sudo apt-get -qq install pkg-config texinfo-4.7 tetex-bin
 script: autoreconf --install && ./configure --enable-timeout-tests=no && make check
