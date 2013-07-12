@@ -4,5 +4,5 @@ compiler:
   - clang
 before_install:
  - sudo apt-get -qq update
- - sudo apt-get -qq install pkg-config texinfo-4.7 tetex-bin
+ - sudo apt-get -qq install pkg-config texinfo texlive
 script: autoreconf --install && ./configure --enable-timeout-tests=no && make check
