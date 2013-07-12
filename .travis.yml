@@ -3,4 +3,4 @@ compiler:
   - gcc
   - clang
 # Change this to your needs
-script: ./configure --enable-timeout-tests=no && make check
+script: autoreconf --install && ./configure --enable-timeout-tests=no && make check
